@@ -91,6 +91,9 @@ namespace RoverNavigation
                         Console.Write("Araç kontrol komutlarını giriniz : ");
                         //Komut dizisi okunur
                         input = Console.ReadLine();
+                        //Komut dizisi uzunluğu kontrol edilir
+                        if (input.Length > 100)
+                            throw new Exception("Komut dizisi uzunluğu 100 karakteri geçemez");
                         //Komutlar tek tek uygulanır
                         rover.Move(input);
                         //Döngüden çıkar
