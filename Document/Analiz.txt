@@ -1,0 +1,85 @@
+GENEL
+----------------
+
+Yazýlým Özellikleri
+-------------------
+Visual Studio 2010
+Console Application
+Framework 4.0
+C#
+
+Araç pozisyonu
+---------------
+- Bir aracýn pozisyonu = x, y, yön
+	- Örnek pozisyon (Sol alt köþe kuzeye bakýyor) = 0, 0, N
+
+Komutlarýn Uygulanmasý
+----------------------
+Yön deðiþtiren L ve R komutlarýnýn tüm durumlarý için Mevcut Yön, Komut, Yeni Yön deðerlerini içeren bir liste hazýrlanacak.
+Aracýn yönü ve komut listede sorgulanarak yeni yön belirlenecek.
+
+Örnek:
+------
+(x, y, N) - L -> (x, y, W)
+(x, y, N) - R -> (x, y, E)
+(x, y, N) - M -> (x, y+1, N)
+
+Girdi
+-----
+- Grid koordinatlarý (x, y)
+- Araç için
+	- pozisyon (x, y, yön)
+	- komut dizisi (L, R, M)
+
+Çýktý
+-----
+- Aracýn yeni pozisyonu (x, y, yön)
+
+Yönler
+---------
+N - Kuzey
+S - Güney
+E - Doðu
+W - Batý
+
+Komutlar
+---------
+L - Sola 90 derece dön
+R - Saða 90 derece dön
+M - Aracýn koordinatýný bulunduðu yöne göre bir birim deðiþtir
+
+SINIFLAR
+--------
+
+Rover - Araç
+------------
+x - x koordinatý
+y - y koordinatý
+direction - yön
+grid - tanýmlý alan
+
+Grid - Tanýmlý Alan
+-------------------
+x - x koordinatý
+y - y koordinatý
+
+DirectionState - Uygulanan komut ile deðiþen yön
+------------------------------------------------
+current direction - mevcut yön
+letter - komut (L ve R)
+new direction - yeni yön
+
+SORULAR
+-------
+-Aracýn pozisyonunda veya komut dizisinde tanýmlanan karakterlerden farklý bir karakter girilirse ne yapýlacak?
+-Aracýn pozisyonu belirlenen alanýn dýþýnda girilirse ne yapýlacak?
+-Girilen komut dizisi sonucunda araç baþka bir araç ile ayný koordinatlara gelirse ne yapýlacak?
+-Girilen komut dizisi sonucunda araç belirlenen alanýn dýþýna çýkarsa ne yapýlacak?
+Cevap : Exception atýlacak
+
+-Toplam araç sayýsý belli mi?
+-Çýktý tüm araçlar için toplu olarak mý yoksa her araç girdisi için mi verilecek?
+Cevap : Tek araç var
+
+-Komut dizisinin sýnýrý var mý?
+Cevap : Sýnýr tanýmlanacak (100)

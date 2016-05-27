@@ -1,0 +1,5 @@
+D:\Projeler\RoverNavigation\bin\Debug\RoverNavigation.exe
+D:\Projeler\RoverNavigation\bin\Debug\RoverNavigation.pdb
+D:\Projeler\RoverNavigation\obj\x86\Debug\RoverNavigation.exe
+D:\Projeler\RoverNavigation\obj\x86\Debug\RoverNavigation.pdb
+D:\Projeler\RoverNavigation\obj\x86\Debug\RoverNavigation.csprojResolveAssemblyReference.cache
