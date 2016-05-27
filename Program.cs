@@ -24,6 +24,9 @@ namespace RoverNavigation
                     input = Console.ReadLine();
                     //Koordinat değerleri ayrıştırılır
                     inputs = input.Split(' ');
+                    //Girilen değer adedi kontrol edilir
+                    if (inputs.Length != 2)
+                        throw new Exception("Yanlış giriş");
                     //Koordinat değerleri atanır
                     x = Convert.ToInt32(inputs[0]);
                     y = Convert.ToInt32(inputs[1]);
@@ -57,6 +60,9 @@ namespace RoverNavigation
                         input = Console.ReadLine();
                         //Pozisyon değerleri ayrıştırılır
                         inputs = input.Split(' ');
+                        //Girilen değer adedi kontrol edilir
+                        if (inputs.Length != 3)
+                            throw new Exception("Yanlış giriş");
                         //Pozisyon değerleri değişkenlere atanır
                         x = Convert.ToInt32(inputs[0]);
                         y = Convert.ToInt32(inputs[1]);
