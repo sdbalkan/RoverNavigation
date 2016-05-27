@@ -1,2 +1,0 @@
-# RoverNavigation
-Rover Navigation
