@@ -62,8 +62,8 @@ namespace RoverNavigation
                         y = Convert.ToInt32(inputs[1]);
                         char direction = inputs[2][0];
                         //Pozisyon değerleri kontrol edilir
-                        if (x <= 0 || y <= 0)
-                            throw new Exception("Koordinat değerleri 0'dan büyük olmalıdır");
+                        if (x < 0 || y < 0)
+                            throw new Exception("Koordinat değerleri 0'dan küçük olamaz");
                         if (x > grid.X || y > grid.Y)
                             throw new Exception("Aracın pozisyonu belirlenen sınırların içinde olmalıdır");
                         if (!rover.CheckDirection(direction))
@@ -88,7 +88,7 @@ namespace RoverNavigation
                 {
                     try
                     {
-                        Console.Write("Araç kontrol komutlarını giriniz : ");
+                        Console.Write("Araç kontrol komut dizisini giriniz : ");
                         //Komut dizisi okunur
                         input = Console.ReadLine();
                         //Komut dizisi uzunluğu kontrol edilir
